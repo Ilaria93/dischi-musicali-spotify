@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dischi-musicali</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+           <div class="container">
+               <img src="logo.png" alt="logo"/>
+                <select id="genere">
+                   <option value="all">Seleziona il tuo genere:</option>
+                   <option value="pop">Pop</option>
+                   <option value="rock">Rock</option>
+                   <option value="metal">Metal</option>
+                   <option value="jazz">Jazz</option>
+               </select>
+           </div>
+    </header>
+<div class="cds-container container"></div>
+
+<!-- TEMPLATE -->
+    <script id="music-template" type="text/x-handlebars-template">
+        <div class="cd {{classGenre}}">
+                <img src='{{posterImg}}' alt="">
+                <h3>{{textTitle}}</h3>
+                <span class="author">{{textName}}</span>
+                <span class="genre">{{textGenre}}</span>
+                <span class="year">{{textDate}}</span>
+            </div>
+    </script>
+     <script src="main.js" charset="utf-8"></script>
+
+    </body>
+</html>
